@@ -1,0 +1,20 @@
+A conversion changes the type of an expression to the type specified by the conversion. 
+A conversion may appear literally in the source, or it may be implied by the context in which an expression appears.
+
+An explicit conversion is an expression of the form T(x) where T is a type and x is an expression that can be converted to type T.
+
+Conversion = Type "(" Expression [ "," ] ")" .
+
+
+If the "type starts with the operator * or <-, or if the type starts with the keyword func and has no result list, 
+it must be parenthesized when necessary to avoid ambiguity:
+
+*Point(p)        // same as *(Point(p))
+
+(*Point)(p)      // p is converted to *Point
+<-chan int(c)    // same as <-(chan int(c))
+(<-chan int)(c)  // c is converted to <-chan int
+func()(x)        // function signature func() x
+(func())(x)      // x is converted to func()
+(func() int)(x)  // x is converted to func() int
+func() int(x)    // x is converted to func() int (unambiguous)

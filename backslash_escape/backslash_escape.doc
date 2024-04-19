@@ -1,0 +1,21 @@
+Different types of the backslash escape 
+
+\n: Represents a newline character. When included in a string, it creates a new line in the output.
+
+\t: Represents a tab character. It inserts a tab space in the output.
+
+
+\: Represents a single backslash character. Useful when you need to include a literal backslash in a string.
+
+fmt.Println("Path: C:\\Users\\John\\Documents")
+
+
+": Represents a double quote character. Used to include double quotes within a string literal.
+
+fmt.Println("He said, \"Hello!\"")
+
+
+\r: Represents a carriage return character. Moves the cursor to the beginning of the current line.
+
+\b: Represents a backspace character. It moves the cursor one position backward.
+\f: Represents a form feed character. It moves the cursor to the beginning of the next page or form.
